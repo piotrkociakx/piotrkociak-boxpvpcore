@@ -1,0 +1,44 @@
+jointitle:
+  title: "&5Witaj Na twojeip.pl!"
+  subtitle: "&6/pomoc"
+messagees:
+  welcomes:
+    joinmessage: "&aGracz {nickname} dolaczyl"
+    exitmessage: "&cGracz {nickname} wyszedł"
+  death:
+    deathmessage: "&cGracz {nickname} umarł"
+    deathbyplayermessage: "&cGracz {nickname} zostal zabity przez {killer}"
+settings:
+  enabled:
+    jointitle:
+      enable: true
+    messages:
+      welcomes: true
+      quits: true
+      death: true
+    inventorydrop:
+      enabled: true
+HelpCommand:
+  lines:
+    - "linijka 1"
+    - "linijka 2"
+helpop:
+  message_invalid_usage: "&cNiepoprawne uzycie uzyj /helpop {wiadomosc}"
+  message_successful_sended: "&aWiadomość została pomyślnie wysłana do administratorow"
+  message_admin: "&c[HelpOp] &r{message}"
+  webhook:
+    enabled: true
+    webhook-url: "URL WEBHOOKA"
+    embed:
+      title: "HelpOP"
+      description: "{player} wyslal wiadomosc do administracji o tresci: {message}"
+      color: "#7289da"
+  title:
+    enable: true
+    title: "&cHelpOP"
+    subtitle: "&cPatrz na chat"
+    sound:
+  sound:
+    enable: true
+
+

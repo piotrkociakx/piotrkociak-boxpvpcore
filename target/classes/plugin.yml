@@ -1,0 +1,12 @@
+name: boxpvpcore
+version: '0.2'
+main: pl.piotrkociakx.boxpvpcore.Boxpvpcore
+prefix: boxpvpcore
+api-version: '1.18'
+load: STARTUP
+authors: [piotrkociakx, laghert]
+description: core pod boxpvp
+website: https:///www.piotrkociakx.pl
+loadbefore: PlaceholderAPI
+softdepend: PlaceholderAPI
+depend: PlaceholderAPI
