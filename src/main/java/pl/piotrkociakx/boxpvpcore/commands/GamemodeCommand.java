@@ -9,12 +9,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import pl.piotrkociakx.boxpvpcore.helpers.ChatHelper;
 
-public class gamemodeCommand implements CommandExecutor {
+public class GamemodeCommand implements CommandExecutor {
 
     private final JavaPlugin plugin;
     private final FileConfiguration config;
 
-    public gamemodeCommand(JavaPlugin plugin, FileConfiguration config) {
+    public GamemodeCommand(JavaPlugin plugin, FileConfiguration config) {
         this.plugin = plugin;
         this.config = config;
         plugin.getCommand("gamemode").setExecutor(this);
@@ -58,7 +58,7 @@ public class gamemodeCommand implements CommandExecutor {
                 gameMode = GameMode.SPECTATOR;
                 break;
             default:
-                player.sendMessage(ChatHelper.colored(config.getString("gamemode.failed")));
+                player.sendMessage(ChatHelper.colored(config.getString("gamemodecommand.failed")));
                 return true;
         }
 

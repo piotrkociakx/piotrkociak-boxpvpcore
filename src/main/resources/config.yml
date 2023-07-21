@@ -1,28 +1,36 @@
 jointitle:
-  title: "&5Witaj Na twojeip.pl!"
-  subtitle: "&6/pomoc"
-messagees:
-  welcomes:
-    joinmessage: "&aGracz {nickname} dolaczyl"
-    exitmessage: "&cGracz {nickname} wyszedł"
-  death:
-    deathmessage: "&cGracz {nickname} umarł"
-    deathbyplayermessage: "&cGracz {nickname} zostal zabity przez {killer}"
-settings:
-  enabled:
-    jointitle:
-      enable: true
-    messages:
-      welcomes: true
-      quits: true
-      death: true
-    inventorydrop:
-      enabled: true
+  enabled: true
+  title: "&5Witaj {player} Na %server_name%!"
+  subtitle: "&6Wpisz /pomoc aby dowiedziec sie wiecej"
+welcomemessages:
+  enable-join-messages: true
+  enable-quit-messages: true
+  joinmessage: "&aGracz {player} dolaczyl na %server_name%"
+  quitmessage: "&cGracz {nickname} wyszedł z %server_name%"
+deathmessages:
+  enabled: true
+  deathmessage: "&cGracz {nickname} umarł"
+  deathbyplayermessage: "&cGracz {nickname} zostal zabity przez {killer}"
+msgcommnad:
+  enabled: true
+  playerNotFoundMessage: "&cNie znaleziono gracza {player}"
+  ReplyPlayerNotFound: "&cNie masz komu odpowiedziec lub ten gracz jest offline"
 HelpCommand:
+  enabled: true
   lines:
-    - "linijka 1"
-    - "linijka 2"
+    - "&c====Pomoc====="
+    - " "
+    - "&2/helpop {wiadomosc} &a- szybka wiadomosc do administracji"
+    - "&2/msg {gracz} {wiadomosc} &a- wysyla wiadomosc do wybranego gracza"
+    - " "
+    - "&c=============="
+vanish:
+  enabled: true
+  enabled-message: "&aVanish zostal wlaczony!"
+  disabled-message: "&cVanish zostal wylaczony"
+
 helpop:
+  enabled: true
   message_invalid_usage: "&cNiepoprawne uzycie uzyj /helpop {wiadomosc}"
   message_successful_sended: "&aWiadomość została pomyślnie wysłana do administratorow"
   message_admin: "&c[HelpOp] &r{message}"
@@ -37,8 +45,14 @@ helpop:
     enable: true
     title: "&cHelpOP"
     subtitle: "&cPatrz na chat"
-    sound:
   sound:
     enable: true
-
-
+    soundName: "BLOCK_ANVIL_LAND"
+flycommand:
+  enabled: true
+  enable-message: "&aLatanie zostalo wlaczone!"
+  disable-message: "&cLatanie zostalo wylaczone"
+gamemodecommand:
+  enabled: true
+  succes-message: true
+  failed-message: "&cNie mozna zmienic trybu gry"

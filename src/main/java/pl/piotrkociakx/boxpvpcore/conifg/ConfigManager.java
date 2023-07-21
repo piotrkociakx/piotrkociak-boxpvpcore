@@ -1,4 +1,4 @@
-package pl.piotrkociakx.boxpvpcore;
+package pl.piotrkociakx.boxpvpcore.conifg;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

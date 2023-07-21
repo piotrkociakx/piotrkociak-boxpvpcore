@@ -43,7 +43,7 @@ public class VanishCommand implements CommandExecutor {
             for (Player onlinePlayer : plugin.getServer().getOnlinePlayers()) {
                 onlinePlayer.showPlayer(plugin, player);
             }
-            player.sendMessage(ChatHelper.colored(config.getString("vanish.disabled")));
+            player.sendMessage(ChatHelper.colored(config.getString("vanish.disabled-message")));
         } else {
             vanishedPlayers.add(player);
             for (Player onlinePlayer : plugin.getServer().getOnlinePlayers()) {
@@ -51,7 +51,7 @@ public class VanishCommand implements CommandExecutor {
                     onlinePlayer.hidePlayer(plugin, player);
                 }
             }
-            player.sendMessage(ChatHelper.colored(config.getString("vanish.enabled")));
+            player.sendMessage(ChatHelper.colored(config.getString("vanish.enabled-message")));
         }
 
         return true;

@@ -24,7 +24,7 @@ public class ReplyCommand implements CommandExecutor {
         this.lastMessageFrom = lastMessageFrom;
 
         // Load configurable message from the configuration
-        this.playerNotFoundMessage = ChatHelper.colored(config.getString("r.playerNotFoundMessage", "&cNie można odnaleźć ostatniego nadawcy wiadomości."));
+        this.playerNotFoundMessage = ChatHelper.colored(config.getString("msgcommnad.ReplyPlayerNotFound"));
 
         plugin.getCommand("reply").setExecutor(this);
     }

@@ -37,9 +37,9 @@ public class FlyCommand implements CommandExecutor {
         player.setAllowFlight(!allowFlying);
 
         if (!allowFlying) {
-            player.sendMessage(ChatHelper.colored("&aWłączono latanie!"));
+            player.sendMessage(ChatHelper.colored(config.getString("flycommand.enable-message")));
         } else {
-            player.sendMessage(ChatHelper.colored("&cWyłączono latanie!"));
+            player.sendMessage(ChatHelper.colored(config.getString("flycommand.disable-message")));
         }
 
         return true;

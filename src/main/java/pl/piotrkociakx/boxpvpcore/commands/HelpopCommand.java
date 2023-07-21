@@ -78,7 +78,7 @@ public class HelpopCommand implements CommandExecutor {
                 if (config.getBoolean("helpop.webhook.enabled")) {
                     WebhookHelper webhookHelper = new WebhookHelper(config.getString("helpop.webhook.webhook-url"));
                     webhookHelper.sendEmbed(
-                        config.getString("helpop.webhook.embed.title"),
+                        config.getString("helpop.webhook.embed.title").replace("{player}", sender.getName()),
                         config.getString("helpop.webhook.embed.description").replace("{player}", sender.getName()).replace("{message}", message),
                         config.getString("helpop.webhook.embed.color")
                     );

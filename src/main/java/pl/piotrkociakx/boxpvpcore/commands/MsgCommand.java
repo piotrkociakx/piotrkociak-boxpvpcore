@@ -23,8 +23,7 @@ public class MsgCommand implements CommandExecutor {
         this.plugin = plugin;
         this.config = config;
 
-        // Load configurable message from the configuration
-        this.playerNotFoundMessage = ChatHelper.colored(config.getString("msg.playerNotFoundMessage", "&cNie można znaleźć gracza o nazwie {player}"));
+        this.playerNotFoundMessage = ChatHelper.colored(config.getString("msgcommnad.playerNotFoundMessage", "&cNie można znaleźć gracza o nazwie {player}"));
 
         plugin.getCommand("msg").setExecutor(this);
     }
@@ -52,18 +51,14 @@ public class MsgCommand implements CommandExecutor {
         UUID targetUUID = targetPlayer.getUniqueId();
         String message = String.join(" ", args).substring(args[0].length() + 1);
 
-        // Checking if sender has colored message permission
         boolean coloredMessageAllowed = senderPlayer.hasPermission("boxpvpcore.msg.colored");
 
-        // Sending the message with color support if allowed
         String senderName = senderPlayer.getName();
         String formattedMessage = coloredMessageAllowed ? ChatHelper.colored(message) : ChatHelper.colored(message);
         targetPlayer.sendMessage(ChatHelper.colored("&7[&aOd " + senderName + "&7] " + formattedMessage));
 
-        // Keeping track of the last message from the sender for /r command
         lastMessageFrom.put(targetUUID, senderPlayer.getUniqueId());
 
-        // Confirmation message for sender
         senderPlayer.sendMessage(ChatHelper.colored("&7[&aDo " + targetPlayer.getName() + "&7] " + formattedMessage));
         return true;
     }
