@@ -7,11 +7,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import pl.piotrkociakx.boxpvpcore.ConfigManager;
 import pl.piotrkociakx.boxpvpcore.helpers.ChatHelper;
 
-public class onPlayerQuit implements Listener {
+public class QuitMessage implements Listener {
     private String QuitMessage;
     private boolean QuitmessageEnabled;
 
-    public onPlayerQuit(ConfigManager configManager) {
+    public QuitMessage(ConfigManager configManager) {
         QuitMessage = configManager.getConfig().getString("messagees.welcomes.exitmessage");
         QuitmessageEnabled = configManager.getBoolean("settings.enabled.messages.quits");
     }
